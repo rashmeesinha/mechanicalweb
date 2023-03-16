@@ -1,0 +1,31 @@
+.section1__container{
+    margin-top: 80px;
+    width: 100%;
+    height: 85vh;
+    background: linear-gradient(
+    180deg,
+    #883d1a,
+    #ffffff,
+    #ffffff
+
+  );
+  background-size: 300% 300%;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.section1__container .aside{
+    padding-top: 100px;
+    padding-left:10%;
+    flex: 40%;
+}
+.section1__container .aside{
+    padding-top: 100px;
+    padding-right:10%;
+    flex: 60%;
+}
+
+.section1__container .aside h2{
+    font-size: 30px;
+}
