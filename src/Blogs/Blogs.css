@@ -1,0 +1,29 @@
+.blogs__main_container{
+    margin-top: 80px;
+    min-width: 600px;
+    width: 100%;
+    color:black;
+    display: flex;
+    justify-content: center;
+}
+.blogs__container{
+    background-color: rgba(136, 61, 26, 0.3);
+    width: 60%;
+    padding: 20px 40px 50px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.blog_tile{
+    background-color: black;
+    color:white;
+    height: fit-content;
+    width: 90%;
+    border: 5px solid #883d1a;
+    padding: 20px;
+    align-self: center;
+}
+h1{
+    align-self:center;
+    color:  #883d1a;
+}
