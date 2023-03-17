@@ -18,12 +18,12 @@ function Navbar() {
       <div className="navRight" id={showLinks ? "hidden" : ""}>
         {" "}
         {/* links */}
-        <span>About Us</span>
-        <span>What we do?</span>
-        <span>Templates</span>
+        {/* <span>About Us</span> */}
+        {/* <span>What we do?</span>
+        <span>Templates</span> */}
         <span>Blogs</span>
         <span>Contact Us</span>{" "}
-        <div style={{ marginBottom: "20px", marginLeft: "10px" }}>
+        {/* <div style={{ marginTop: '20px', marginBottom: "20px", marginLeft: "10px" }}>
           <Button
             color="#883d1a"
             bgcolor="white"
@@ -33,7 +33,7 @@ function Navbar() {
           >
             Sign In
           </Button>
-        </div>
+        </div> */}
       </div>
       <div className="hamburger" onClick={() => setShowLinks(!showLinks)}>
         {" "}
