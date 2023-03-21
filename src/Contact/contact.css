@@ -1,0 +1,96 @@
+.contact_maincontainer{
+    margin-top: 80px;
+    min-width: 600px;
+    width: 100%;
+    color:black;
+    display: flex;
+    justify-content: center;
+}
+.contact_container{
+  background-color: rgba(136, 61, 26, 0.3);
+  width: 60%;
+  padding: 20px 40px 50px;
+  display: flex;
+  flex-direction: column;
+}
+.contactPage {
+ 
+  height: auto;
+  color: aliceblue;
+  margin-top: 40px;
+  /*padding-top: 5%;*/
+  /*border-radius: 50px;*/
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 10px rgba(255, 255, 255, 0.4);
+  width: 100%;
+  
+}
+
+.contactPage .contactData {
+  padding: 0;
+  margin:0;
+}   
+
+.contactPage .contactData .hire {
+    font-size: 45px;
+    display: center;
+    font-weight: bold;
+   
+    
+}
+.hireText {
+  font-size: 20px;
+  color: #000000;
+  font-weight: bold;
+  
+}
+
+.contactPage .contactData img {
+  height: 35px;
+  width: auto;
+  margin-left: 30px;
+}
+
+.contactBox {
+  width: 70%;  
+  height: auto;
+  color:black;
+  font-size: 15px;
+  padding-inline: 20px;
+  display: flex;
+  padding: 40px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.contactBox input, textarea {
+  margin-bottom: 30px;
+  height: 40px;
+  width: auto;
+  border-radius: 10px;
+  border: none;
+}
+.contactBox textarea {
+  height: 80px;
+  width: auto;
+  border: none;
+}
+ .contactBox button{             
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 15px;
+  padding: 7px 10px;
+  border-radius: 10px;
+  border: none;
+  
+  cursor: pointer;
+ }
+
+ .wrongEmail{
+  color: red;
+ }
+ .contactEmail{
+  display: none;
+ }
+
