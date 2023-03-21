@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import Button from "../CustomElements/Button";
 
@@ -8,6 +9,7 @@ import LogoWhite from "./whiteLogo.png";
 
 function Navbar() {
   const [showLinks, setShowLinks] = useState(false);
+  const navigate=useNavigate();
 
   return (
     <div className="navbar">
@@ -21,8 +23,8 @@ function Navbar() {
         {/* <span>About Us</span> */}
         {/* <span>What we do?</span>
         <span>Templates</span> */}
-        <span>Blogs</span>
-        <span>Contact Us</span>{" "}
+        <span onClick={()=>navigate("/")}>Blogs</span>
+        <span onClick={()=>navigate("/contactUs")}>Contact Us</span>{" "}
         {/* <div style={{ marginTop: '20px', marginBottom: "20px", marginLeft: "10px" }}>
           <Button
             color="#883d1a"
