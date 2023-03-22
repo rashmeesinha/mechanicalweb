@@ -7,7 +7,7 @@ function Blogs() {
   return (
     <div className="blogs__main_container">
       <div className="blogs__container">
-        <h1>Important JS Interview coding questions Hello</h1>
+        <h1>Important JS Interview coding questions</h1>
         {bundleArray &&
           bundleArray.map((item, index) => {
             return (
