@@ -3,7 +3,6 @@ import { render } from "react-dom";
 import instaImg from "./instagram.png";
 import fbImg from "./facebook.png";
 import lnkdImg from "./linkedin.png";
-import emailjs from "emailjs-com";
 import Button from '../CustomElements/Button'
 
 import "./contact.css";
@@ -13,19 +12,8 @@ function Contact() {
 
   function sendEmail(e) {
     e.preventDefault();
-    console.log("hi");
-    emailjs
-      .sendForm(
-        "service_clf9vk9",
-        "template_ikzbfqz",
-        e.target,
-        "xVpqoGxI0NUNhhgR_"
-      )
-      .then((res) => {
-        if (res.text == "OK") alert("Email Sent Successfully!");
-      })
-      .catch((err) => console.log(err));
-    e.target.reset();
+    console.log("Email sent")
+  
   }
 
   function emailValidation(e) {
