@@ -23,7 +23,7 @@ function Navbar() {
         {/* <span>About Us</span> */}
         {/* <span>What we do?</span>
         <span>Templates</span> */}
-        <span onClick={()=>navigate("/")}>Blogs</span>
+        <span onClick={()=>navigate("/")}>JS coding</span>
         <span onClick={()=>navigate("/contactUs")}>Contact Us</span>{" "}
         {/* <div style={{ marginTop: '20px', marginBottom: "20px", marginLeft: "10px" }}>
           <Button

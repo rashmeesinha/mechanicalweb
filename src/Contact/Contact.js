@@ -4,16 +4,29 @@ import instaImg from "./instagram.png";
 import fbImg from "./facebook.png";
 import lnkdImg from "./linkedin.png";
 import Button from '../CustomElements/Button'
-
+import emailjs from "emailjs-com";
 import "./contact.css";
+import Footer from "../Footer/Footer";
+import Navbar from "../Navbar/Navbar";
 
 function Contact() {
   let [emailValidationResult, setEmail] = useState("");
 
+ 
   function sendEmail(e) {
     e.preventDefault();
-    console.log("Email sent")
-  
+    emailjs
+      .sendForm(
+        "service_8yob0er",
+        "template_ikzbfqz",
+        e.target,
+        "n9K4-DTMTio0S7b7e"
+      )
+      .then((res) => {
+        if (res.text == "OK") alert("Email Sent Successfully!");
+      })
+      .catch((err) => console.log(err));
+    e.target.reset();
   }
 
   function emailValidation(e) {
@@ -26,6 +39,8 @@ function Contact() {
   }
 
   return (
+    <>
+    <Navbar/>
     <div className="contact_maincontainer">
       <div className="contact_container">
       <div className="contactPage" id="contactMe" align="center">
@@ -93,6 +108,8 @@ function Contact() {
     </div>
     </div>
     </div>
+    <Footer/>
+    </>
   );
 }
 

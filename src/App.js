@@ -5,19 +5,18 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import Blogs from './Blogs/Blogs';
 import Footer from './Footer/Footer'
 import Contact from './Contact/Contact';
+import bundleArray from './Blogs/bundleArray'
 
 function App() {
   return (
     <div className="App">
-    
       <Router>
-      <Navbar></Navbar>
         <Routes>
-          <Route path='/' index element={<Blogs/>}></Route>
+          <Route path='/' index element={<Blogs bundleArray={bundleArray}/>}></Route>
           <Route path='/contactUs'exact element={<Contact/>}></Route>
         </Routes>
       </Router>
-      <Footer></Footer>
+      
     </div>
   );
 }

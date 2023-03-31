@@ -1,5 +1,6 @@
 .footer {
-    
+    width: 100vw;
+    min-width: 600px;
     padding-top:10px;
     background-color: #883d1a;
     display: flex;

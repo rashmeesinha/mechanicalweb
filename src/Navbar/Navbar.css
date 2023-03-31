@@ -1,8 +1,9 @@
 .navbar {
   background-color:#883d1a;
-  width: 100%;
+  width: 100vw;
+  min-width: 600px;
   height: 80px;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
 }

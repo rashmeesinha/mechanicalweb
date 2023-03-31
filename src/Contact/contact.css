@@ -1,5 +1,4 @@
-.contact_maincontainer{
-    margin-top: 80px;
+.contact_maincontainer{ 
     min-width: 600px;
     width: 100%;
     color:black;
@@ -7,8 +6,8 @@
     justify-content: center;
 }
 .contact_container{
-  background-color: rgba(136, 61, 26, 0.3);
-  width: 60%;
+  background-color: rgba(136, 61, 26, 0.1);
+  width: 100%;
   padding: 20px 40px 50px;
   display: flex;
   flex-direction: column;

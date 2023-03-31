@@ -6,7 +6,7 @@ function Tile(props) {
   return (
     <>
       <p>
-        Question {props.index + 1}. {props.item.ques}
+        <b>Q{props.item.id}.</b> {props.item.ques}
       </p>
       <pre className="blog_tile">{props.item.ans}</pre>
     </>
