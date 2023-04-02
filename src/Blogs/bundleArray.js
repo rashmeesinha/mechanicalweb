@@ -1,16 +1,19 @@
 const bundleArray = [
   { id: 1,
     ques: "Printing 1 to 10 after each 1 second using let.",
+    sol:'We need to print 1 to 10 after a 1 sec using let variable only',
     ans: `for(let i=1;i<=10;i++){
 
-     setTimeout(()=>console.log(i),i*1000);
+     setTimeout(()=>
+      console.log(i),i*1000);
     }`,
   },
   { id: 2,
     ques: "Printing 1 to 10 after each 1 second using var.",
     ans: `for(var i=1;i<=10;i++){
         function interval(x){
-            setTimeout(()=>console.log(x),x*1000);
+            setTimeout(()=>
+             console.log(x),x*1000);
          }
         interval(i);    
     }
@@ -49,7 +52,8 @@ else
   },
   { id:6,
     ques:'How to remove duplicate from array : arr=[1,2,4,2,4,5,2,1,6,7]?',
-    ans:`    let arr=[1,2,3,4,5,6,1,2,3,3,4,2,5,0];
+    ans:`    let arr=[1,2,3,4,5,3, 
+       3,4,2,5,0];
     let arr1=[];
     
     
@@ -63,7 +67,8 @@ else
   { id: 7,
     ques:'Sort an array of number.',
     ans:`    let points = [40, 100, 1, 5, 25, 10];
-    points.sort(function(a, b){return a- b});
+    points.sort(function(a, b)
+      {return a- b});
 
     console.log(points);
     `
@@ -133,7 +138,8 @@ else
   },
   { id: 12,
     ques:' How to print pair to element which is equal to a particular number.',
-    ans:`  const arr = [1, 6, 2, 4, 3, 0, 13, 24, 6, 7, 8, 9, 10];
+    ans:`  const arr = [1, 0, 13, 24, 6, 
+       7, 8, 9, 10];
     const k=13;
     let obj={};
     function fun(){
@@ -150,32 +156,29 @@ else
   },
   { id: 13,
     ques:'Flatten the array without using flat():',
-    ans:`  let arr = [1, 2, 3, [4, 5, [6]]]; //[1,2,3,4,5,6]
-    let result = [];
-    
-    function flatArray(arr) {
-      //result=arr.flat();
-      for (let i = 0; i < arr.length; i++) {
-        console.log(typeof arr[i]);
-        if (typeof arr[i] === "object") {
-          flatArray(arr[i]);
-        } else result.push(arr[i]);
-      }
-  
-      return result;
+    ans:`  let arr = [1, 2, 3, [4, 5, [6]]]; 
+  //[1,2,3,4,5,6]
+  let result = [];    
+  function flatArray(arr) {    
+    for (let i = 0; i < arr.length; i++) {
+      console.log(typeof arr[i]);
+      if (typeof arr[i] === "object") {
+        flatArray(arr[i]);
+      } else result.push(arr[i]);
     }
-    
-    console.log(flatArray(arr));
-    
-    let arr = [1, 2, 3, [4, 5, [6,[7,8]]]]
-    
-    var flatten=arr.join(",").split(",");
-    console.log(flatten); 
+  return result;
+  }   
+  console.log(flatArray(arr));
+  
+let arr = [1, 2, 3, [4, 5, [6,[7,8]]]]    
+var flatten=arr.join(",").split(",");
+console.log(flatten); 
     `
   },
   { id: 14,
     ques:'Print the reshuffled array by given number',
-    ans:`   let arr=[1,2,3,4,5,6] // [ 4, 5, 6, 1, 2, 3 ]
+    ans:`   let arr=[1,2,3,4,5,6] 
+    // [ 4, 5, 6, 1, 2, 3 ]
     let n=3
     
     
@@ -208,6 +211,219 @@ else
     }
     console.log(fib(15))
     `
+  },{
+    id:16,
+    ques:'Write a program to print all combination of the given String. Ex – ABC: ABC, BCA, CAB, CBA, BAC, ACB',
+    ans:`   function permute(str, l, r) {
+      if (l == r) {
+        console.log(str);
+      } else {
+        for (let i = l; i <= r; i++) {
+          str = swap(str, l, i);
+          permute(str, l + 1, r);
+          str = swap(str, l, i);
+        }
+      }
+    }
+    
+    function swap(a, i, j) {
+      let temp;
+      let charArray = a.split("");
+      temp = charArray[i];
+      charArray[i] = charArray[j];
+      charArray[j] = temp;
+      return charArray.join("");
+    }
+    
+    let str = "ABCD";
+    let n = str.length;
+    permute(str, 0, n - 1);
+    
+    `
+  },
+  { id:17,
+    ques:'How to flatten a deeply nested Object:',
+    ans:`
+    let obj = {
+      name: {
+        firstName: "John",
+        lastName: "Doe",
+        fathersName: {
+          fName: "John",
+          lName: "Doe",
+        },
+      },
+      address: "test",
+      contact: {
+        countryCode: "+91",
+        phone: "1234567890",
+      },
+    };
+    
+    function traverseObject(obj, s) {
+      for (let key in obj) {
+        if (typeof obj[key] == "object") {
+          if (s == "") s = s + key;
+          else s = s + "-" + key;
+          traverseObject(obj[key], s);
+          s = "";
+        } else {
+          if (s == "") console.log(s + key + ": " + obj[key]);
+          else console.log(s + "-" + key + ": " + obj[key]);
+        }
+      }
+    }
+    
+    console.log(traverseObject(obj, ""));
+    
+    `
+    
+  },{
+    id:18,
+    ques:'How to check an array in JS?',
+    ans:`
+    let arr=[12,3,5]
+    console.log(Array.isArray(arr)) //true
+    `
+  },{
+    id:19,
+    ques:'Give an example for Infinite Currying implementation.',
+    ans:`
+    function sum(a){
+      return function(b){
+          if(!b)
+          return a
+          else
+          return sum(a+b)
+      }
+  }
+
+  console.log(sum(1)(2)(2)(4)())
+    `
+  },{
+    id:20,
+    ques:'Give an expample for normal currying implementation.',
+    ans:`
+    function sum1(a){
+      return function(b){
+          return function(c)
+         {
+          return a+b+c;
+         } 
+      }
+  }
+  
+  console.log(sum1(1)(2)(2))`
+  },{
+    id:21,
+    ques:'Given two strings, return true if they are anagrams of one another',
+    ans:`
+    let x = "army";
+let y = "mary";
+
+
+function anagram(a, b) {
+  a = a.split("").sort().join("");
+  b = b.split("").sort().join("");
+  
+  if (a == b) return true;
+  else return false;
+}
+
+console.log(anagram(x, y));
+`
+  },
+  {
+    id:22,
+    ques:'Write a Program to merge 2 sorted array',
+    ans:`
+    let arr1=[1,2,6,9,15]
+let arr2=[3,7,8,10,12,20]
+
+let n1=arr1.length;
+let n2=arr2.length;
+
+function merge(arr1,arr2,n1,n2){
+
+    let arr3=[]
+    let i=0
+    let j=0
+    let k=0
+    while(i<n1&& j<n2){
+        if(arr1[i] < arr2[j]){
+            arr3[k++]=arr1[i++]
+        }
+        else{
+            arr3[k++]=arr2[j++]
+        }
+    }
+
+    while(i<n1){
+        arr3[k++]=arr1[i++]
+    }
+
+    while(j<n2){
+        arr3[k++]=arr2[j++]
+    }
+return arr3;
+}
+console.log(merge(arr1,arr2,n1,n2))
+`
+  },{
+    id:23,
+    ques:'how to implement mergesort algo',
+    ans:`
+    let array=[10,3,2,9,8,6,5]
+let L=0;
+let R=array.length
+let n=array.length
+
+function merge(arr,l,m,r){
+    let n1=m-l+1;
+    let n2=r-m;
+
+    let arrL=[]
+    let arrR=[]
+
+    for(let i=0;i<n1;i++){
+        arrL[i]=arr[l+i]
+    }
+
+    for(let j=0;j<n2;j++){
+        arrR[j]=arr[m+1+j]
+    }
+    let i=0;
+    let j=0;
+    let k=l
+    while(i<n1 && j<n2){
+        if(arrL[i]<=arrR[j]){
+            arr[k++]=arrL[i++]
+        }
+        else
+        arr[k++]=arrR[j++]
+    }
+    while(i<n1){
+        arr[k++]=arrL[i++]
+    }
+    while(j<n2){
+        arr[k++]=arrR[j++]
+    }
+}
+
+function sort1(arr,l,r){
+    if(l>=r)
+    return
+
+    let m=l+parseInt((r-l)/2)
+
+    sort1(arr,l,m)
+    sort1(arr,m+1,r)
+
+    merge(arr,l,m,r)
+}
+sort1(array,0,array.length-1)
+console.log(array)
+`
   }
  
  

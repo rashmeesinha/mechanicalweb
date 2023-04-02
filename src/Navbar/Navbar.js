@@ -20,10 +20,11 @@ function Navbar() {
       <div className="navRight" id={showLinks ? "hidden" : ""}>
         {" "}
         {/* links */}
-        {/* <span>About Us</span> */}
+        <span>About Us</span>
         {/* <span>What we do?</span>
         <span>Templates</span> */}
-        <span onClick={()=>navigate("/")}>JS coding</span>
+        <span onClick={()=>navigate("/jstheory")}>JavaScript</span>
+        <span onClick={()=>navigate("/jscoding")}>JS coding</span>
         <span onClick={()=>navigate("/contactUs")}>Contact Us</span>{" "}
         {/* <div style={{ marginTop: '20px', marginBottom: "20px", marginLeft: "10px" }}>
           <Button

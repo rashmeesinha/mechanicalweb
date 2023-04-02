@@ -3,12 +3,19 @@ import "./Blogs.css"
 import React from "react";
 
 function Tile(props) {
+
+  const ans=props.item.ans
+  const ques= props.item.ques
+  const sol= props.item.sol
+
   return (
     <>
       <p>
-        <b>Q{props.item.id}.</b> {props.item.ques}
+        <b>Q{props.item.id}. {ques}</b>
       </p>
-      <pre className="blog_tile">{props.item.ans}</pre>
+      {ans && <pre className="blog_tile">{ans}</pre>}
+      {sol && <p className="blog_sol">{sol}</p>}
+      
     </>
   );
 }

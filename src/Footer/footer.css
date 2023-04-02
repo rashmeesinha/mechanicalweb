@@ -1,35 +1,65 @@
 .footer {
-    width: 100vw;
-    min-width: 600px;
+    width: 100%;
     padding-top:10px;
-    background-color: #883d1a;
+    height:400px;
+    background-color: #9f906f;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: center; 
+}
+
+.footer .about_us{
+    padding: 50px 30px 50px;
+    margin:0px 40px 20px;
+    flex:70%;
+    width: 300px;
+  }
+
+.footer .services{
+  flex:30%;
+  line-height: 15px;
+  padding-top: 10%;
+  align-self:self-start;
 }
 
 .footer .footerImg {
-    flex: 50%;
-    justify-content: left;
-}
-.footer .footerCR {
-    flex: 50%;
-    display: flex;
-    justify-content: right;
-    align-items: flex-start;
-    padding-right: 50px;
-  
+  align-self:self-start;
+  padding-top:20px;
 }
 
 .footer img {
     height: 35px;
     width: auto;
     margin-left: 30px;
-    
+    box-shadow: 2px 2px 4px black;
+    border-radius: 10px; 
   }
+
   .footer p {
      color: beige;
      text-shadow: 2px 2px 4px black;
-      font-size: 15px;
-      
+     font-size: 15px; 
   }
+  h2{
+    text-shadow: 2px 2px 4px black;
+  }
+
+  .footerCR {
+    color: beige;
+    text-shadow: 2px 2px 4px black;
+    font-size: 15px; 
+    background-color: #706953;
+    text-align: center;
+    width: 100%;
+}
+
+a{
+  text-decoration: none;
+  color: beige;
+}
+ 
+a:hover{
+  text-decoration: none;
+  color: beige;
+  cursor: pointer;
+}

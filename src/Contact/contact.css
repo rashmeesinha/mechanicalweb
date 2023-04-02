@@ -1,12 +1,12 @@
 .contact_maincontainer{ 
-    min-width: 600px;
+   
     width: 100%;
     color:black;
     display: flex;
     justify-content: center;
 }
 .contact_container{
-  background-color: rgba(136, 61, 26, 0.1);
+  background-color:   rgba(112, 105, 83, 0.1);
   width: 100%;
   padding: 20px 40px 50px;
   display: flex;

@@ -9,6 +9,7 @@ import Tile from "./Tile";
 
 function Blogs(props) {
     const bundleArray= props.bundleArray
+    const pagesize = props.pagesize
   const [page, setPage] = React.useState(1);
   const [paginatedArray, setPaginatedArray] = React.useState(
     bundleArray.slice(0, 5)
@@ -16,10 +17,10 @@ function Blogs(props) {
   
 
   useEffect(()=>{
-    const from = (page - 1) * 5;
-    const to = (page - 1) * 5 + 5;
+    const from = (page - 1) * pagesize;
+    const to = (page - 1) * pagesize + pagesize;
     setPaginatedArray(bundleArray.slice(from, to));
-  },[page])
+  },[page, bundleArray])
 
   const handleChange = (event, value) => {
     setPage(value);
@@ -28,7 +29,7 @@ function Blogs(props) {
   return (
     <>
         <Navbar/>
-      <div className="blogs__main_container">
+      <div className="blogs__main_container" id="tag">
         <div className="blogs__container">
           <h1>Important JS Interview coding questions</h1>
           <p>
@@ -41,7 +42,7 @@ function Blogs(props) {
             })}
           <div className="paginate_index">
             <Pagination
-              count={bundleArray.length / 5}
+              count={Math.ceil(bundleArray.length / pagesize)}
               page={page}
               onChange={handleChange}
               variant="outlined"
@@ -51,6 +52,7 @@ function Blogs(props) {
               showPrevButton
               showFirstButton
               showLastButton
+              siblingCount={0}
             />
           </div>
         </div>

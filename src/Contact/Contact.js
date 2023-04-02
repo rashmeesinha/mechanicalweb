@@ -97,10 +97,10 @@ function Contact() {
             required
           ></textarea>
           <Button type="submit" color="white"
-            bgcolor="#883d1a"
+            bgcolor="#706953"
             height="40px"
             width="100px"
-            border="#883d1a">
+            border="#706953">
             Submit
           </Button>
         </form>

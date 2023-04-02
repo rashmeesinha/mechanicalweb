@@ -1,12 +1,11 @@
 .blogs__main_container{
-    min-width: 600px;
     width: 100%;
     color:black;
     display: flex;
     justify-content: center;
 }
 .blogs__container{
-    background-color: rgba(136, 61, 26, 0.1);
+    background-color: rgba(112, 105, 83, 0.1);
     width: 100%;
     padding: 20px 40px 50px;
     display: flex;
@@ -18,13 +17,13 @@
     color:black;
     height: fit-content;
     width: 90%;
-    border: 5px solid #883d1a;
+    border: 5px solid #706953;
     padding: 20px;
     align-self: center;
 }
 h1{
     align-self:center;
-    color:  #883d1a;
+    color:  #9f906f;
 }
 .paginate_index{
     padding-top: 40px;
@@ -38,4 +37,11 @@ h1{
     display: sticky;
     top:0;
     left:15%;
+}
+
+.blog_sol{
+    color:black;
+    height: fit-content;
+    width: 90%;
+    padding: 5px;
 }
