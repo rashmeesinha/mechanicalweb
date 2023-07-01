@@ -2,7 +2,7 @@
   "name": "mechanicalweb",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://mechanicalweb.in",
+  "homepage": "https://mechanicalweb.in",
   "description": "my react application",
   "dependencies": {
     "@emotion/react": "^11.10.6",
