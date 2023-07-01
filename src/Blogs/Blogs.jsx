@@ -20,7 +20,7 @@ function Blogs(props) {
     const from = (page - 1) * pagesize;
     const to = (page - 1) * pagesize + pagesize;
     setPaginatedArray(bundleArray.slice(from, to));
-  },[page, bundleArray])
+  },[page, bundleArray, pagesize])
 
   const handleChange = (event, value) => {
     setPage(value);
