@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.353a94bc.css",
+    "main.js": "/static/js/main.ac0ca939.js",
+    "static/js/27.0c225858.chunk.js": "/static/js/27.0c225858.chunk.js",
+    "static/media/instagram.png": "/static/media/instagram.e719d8b29f452a16302d.png",
+    "static/media/whiteLogo.png": "/static/media/whiteLogo.d86d459d385334a6f4b6.png",
+    "static/media/linkedin.png": "/static/media/linkedin.f249b38224ca41a0b909.png",
+    "index.html": "/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.353a94bc.css",
+    "static/js/main.ac0ca939.js"
+  ]
+}
